@@ -21,7 +21,7 @@ gem 'arkecosystem-crypto'
 ```ruby
 require 'arkecosystem/crypto'
 
-transaction = ArkEcosystem::Crypto::Builder::Transfer.new()
+transaction = ArkEcosystem::Crypto::Transactions::Builder::Transfer.new()
   .set_recipient_id('DGihocTkwDygiFvmg6aG8jThYTic47GzU9')
   .set_amount(1 * 10 ** 8)
   .set_vendor_field('This is a transaction from Ruby')
@@ -99,7 +99,7 @@ ArkEcosystem::Crypto::Identities::Address.from_private_key('d8839c2432bfd0a67ef1
 
 #### Validate an address
 ```ruby
-ArkEcosystem::Crypto::Identities::Address.validate('this is a top secret passphrase')
+ArkEcosystem::Crypto::Identities::Address.validate('address')
 ```
 
 ### Private Key
